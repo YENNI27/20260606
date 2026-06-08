@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+/* 全站字體 */
+* {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #fff7f3 0%,
+    #ffe5ec 35%,
+    #dff6ff 70%,
+    #f8edff 100%
+  );
+
+  overflow-x: hidden;
+}
+
+/* Root */
+#root {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* ===== 主題系統 ===== */
+
+.theme-forest-green {
+  --primary: #7bc96f;
+  --primary-light: #dff2d8;
+  --primary-text: #2d5016;
+  --secondary: #f3faef;
+}
+
+.theme-sakura-pink {
+  --primary: #ffb7c5;
+  --primary-light: #ffe5ec;
+  --primary-text: #7a4452;
+  --secondary: #fff5f8;
+}
+
+.theme-ocean-blue {
+  --primary: #80ced7;
+  --primary-light: #dff6ff;
+  --primary-text: #1f5061;
+  --secondary: #f0fbfd;
+}
+
+.theme-night-purple {
+  --primary: #b8a1ff;
+  --primary-light: #f0eaff;
+  --primary-text: #473b6b;
+  --secondary: #faf7ff;
+}
+
+/* ===== 標題 ===== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0;
+}
+
+h1 {
+  font-size: 56px;
+  color: #ff8fab;
+  letter-spacing: -1px;
+  margin: 24px 0;
+}
+
+h2 {
+  font-size: 32px;
+  color: #80ced7;
+  margin-bottom: 12px;
+}
+
+h3 {
+  color: #b5838d;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
+/* ===== 文字 ===== */
+
+p {
+  margin: 0;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ===== 卡片 ===== */
+
+.cute-card {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.cute-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== 可愛按鈕 ===== */
+
+.cute-btn {
+  border: none;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #ffcad4,
+    #bde0fe
+  );
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cute-btn:hover {
+  transform: scale(1.08);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== 景點卡 ===== */
+
+.attraction-card {
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+}
+
+.attraction-card:hover {
+  transform: scale(1.03);
+}
+
+/* ===== 漂浮動畫 ===== */
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ===== 台灣裝飾 ===== */
+
+.taiwan-decoration {
+  position: absolute;
+  opacity: 0.15;
+  font-size: 70px;
+  pointer-events: none;
+}
+
+/* ===== 捲動條 ===== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff5f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffb7c5;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8fab;
+}
